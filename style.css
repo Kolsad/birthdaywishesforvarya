@@ -1,0 +1,195 @@
+
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    overflow: hidden;
+}
+
+/* Фон и анимация падающих элементов */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.falling-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.falling-elements div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+.falling-left1 {
+    background-image: url('left1.png');
+}
+
+.falling-left2 {
+    background-image: url('left2.png');
+}
+
+.falling-left3 {
+    background-image: url('left3.png');
+}
+
+.falling-left4 {
+    background-image: url('left4.png');
+}
+
+.falling-right1 {
+    background-image: url('right1.png');
+}
+
+.falling-right2 {
+    background-image: url('right2.png');
+}
+
+.falling-right3 {
+    background-image: url('right3.png');
+}
+
+.falling-right4 {
+    background-image: url('right4.png');
+}
+
+/* Анимация падения */
+@keyframes fall {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(0, 100vh) rotate(360deg);
+    }
+}
+
+/* Плавающая надпись */
+.floating-text {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Центрированная основная секция */
+.content {
+    text-align: center;
+    margin-top: 20%;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px #000;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Всплывающее окно */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #252526;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    width: 70%;
+    height: 70%;
+}
+
+#popup img {
+    width: 300px;
+    height: auto;
+}
+
+#popup #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.messages {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, #444, #666);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}

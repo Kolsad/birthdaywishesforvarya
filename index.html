@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С днем рождения!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Контейнер для анимации падающих картинок -->
+        <div class="falling-elements"></div>
+    </div>
+    <div class="content">
+        <h1>С днем рождения, Варя!</h1>
+        <button id="showPopup">Открыть поздравления</button>
+    </div>
+    <!-- Плавающая надпись -->
+    <div class="floating-text">Отдельное спасибо Лизе за помощь в создании digital поздравления :)</div>
+
+    <!-- Всплывающее окно -->
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <button id="closePopup">Закрыть</button>
+            <img src="congrats.gif" alt="Поздравление">
+            <audio id="audio" src="happy.mp3"></audio>
+            <div class="messages">
+                <h2>Поздравления:</h2>
+                <div class="card">
+                    <h3>От Лизы</h3>
+                    <p>С днём рождения фейковая кудрявая девушка моя</p>
+                </div>
+                <div class="card">
+                    <h3>От Тимофея</h3>
+                    <p>С днем рождения поздравляю!
+Удачи, радости желаю!
+Счастливой жизни, долгих лет,
+Успеха, силы и побед!
+© https://pozdravok.com/pozdravleniya/den-rozhdeniya/zhenshchine/korotkie/</p>
+                </div>
+                <div class="card">
+                    <h3>От Андрея Савари</h3>
+                    <p>йоуйоу йоу я п*ид***р</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
